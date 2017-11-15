@@ -185,8 +185,6 @@ void loop() {
   int16_t averageVccInt = round(averageVcc);
   Serial.print(averageVccInt);
   Serial.print(" mV \n"); 
-  //message[0] = highByte(averageVccInt);
-  //message[1] = lowByte(averageVccInt);
   
   dtostrf( averageVccInt, 3, 2, temp );
   root["Voltage"] = temp;
