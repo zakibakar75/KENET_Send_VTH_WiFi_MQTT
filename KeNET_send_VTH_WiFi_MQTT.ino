@@ -1,5 +1,5 @@
 /*
-  MQTT Connection - Sending Dust Sensor Information
+  MQTT Connection - Sending On-Board Voltage, Temp & Humidity Information
 */
 
 #include "DHT.h"
@@ -23,8 +23,8 @@ WiFiEspClient client;                 // instance of WiFi ESP Client
 PubSubClient mqttClient(client);      // PubSub using the WiFI ESP Client
 
 const char* server = "mqtt.dioty.co"; // MQTT server (of your choice)
-char ssid[] = "MyRouter";             // your network SSID (name)
-char pass[] = "motorolaradio";        // your network password
+char ssid[] = "XXXXX";             // your network SSID (name)
+char pass[] = "xxxxxxx";        // your network password
 int status = WL_IDLE_STATUS;          // the Wifi radio's status
 
 /********** For any JSON packet creation ************/
@@ -136,7 +136,7 @@ void reconnect() {
   while (!mqttClient.connected()) {
     Serial.print("Attempting MQTT connection...");
     // Attempt to connect
-    if (mqttClient.connect(NULL, "zaki.bm@gmail.com", "aa3ca97e")) {
+    if (mqttClient.connect(NULL, "xxxxx@yyyyyy", "zzzzzz")) {
       Serial.println("connected");
       // Once connected, publish an announcement...
       mqttClient.publish("/zaki.bm@gmail.com/1234", "hello world");
