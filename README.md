@@ -1,6 +1,6 @@
 MQTT connection using ESP8266 Cytron WiFi Shield to Dioty MQTT broker 
 
-This is not a library. This is my code to publish on-board voltage, DHT22 sensor reading to Dioty MQTT broker.
+This is my code to publish on-board voltage, DHT22 sensor reading to Dioty MQTT broker.
 
 The hardware used here are :
 1) Arduino UNO clone.
